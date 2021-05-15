@@ -25,8 +25,15 @@ public class CondicionalController {
 		 *  
 		 */
 		
-		
-		return ResponseEntity.ok("APÓS O ALGORITMO COLOCAR O TEXTO/VARIAVEL DE RETORNO AQUI");
+		String response = "";
+
+		if(idade >= 18){
+			response = "Possui mais de 18 anos";
+		}else{
+			response = "Possui menos de 18 anos";
+		}
+
+		return ResponseEntity.ok(response);
 	}
 	
 }
